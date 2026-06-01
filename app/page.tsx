@@ -107,21 +107,22 @@ function Header() {
         className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
       >
         <Sparks width={14} height={14} />
-        <span>A free tool by Honeyb</span>
+        <span>The free AI search optimisation tool by Honeyb</span>
       </a>
       <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight max-w-3xl">
-        Test how consistently AI answers your prompt.
+        The best free AI search optimisation tool.
       </h1>
       <p className="text-lg text-[var(--muted)] max-w-2xl">
-        Run the same prompt against Gemini multiple times. See which brands it
-        mentions, how stable the answer is, and where the gaps are. Built by{" "}
+        Run any prompt against Gemini multiple times and see how AI search
+        actually treats your brand. Test consistency, count brand mentions, and
+        find the gaps in your AI search visibility. Built by{" "}
         <a
           href="https://honeyb.ai"
           className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
         >
           Honeyb
         </a>
-        .
+        , the AI search optimisation platform for ambitious brands.
       </p>
     </div>
   );
@@ -474,18 +475,20 @@ function UseCases() {
   return (
     <section className="mt-16">
       <h2 className="text-2xl font-semibold tracking-tight">
-        What you can do with this
+        Why AI search optimisation matters
       </h2>
       <p className="mt-2 text-[var(--muted)] max-w-2xl">
-        A single run shows you a snapshot. Repeated runs show you the pattern.
-        Here&apos;s where teams using{" "}
+        Buyers ask AI before they ask Google. AI search optimisation is how you
+        make sure the answer is on your side. A single run shows you a
+        snapshot. Repeated runs show you the pattern.{" "}
         <a
           href="https://honeyb.ai"
           className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
         >
           Honeyb
         </a>{" "}
-        put that pattern to work.
+        is the AI search optimisation platform that turns that pattern into a
+        working report.
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         {items.map((item) => (
@@ -518,7 +521,9 @@ function InlineLink({ children }: { children: React.ReactNode }) {
 function AboutHoneyb() {
   return (
     <section className="mt-16 rounded-[28px] bg-[var(--surface)] p-8 md:p-10">
-      <h2 className="text-2xl font-semibold tracking-tight">About Honeyb</h2>
+      <h2 className="text-2xl font-semibold tracking-tight">
+        Honeyb: the AI search optimisation platform
+      </h2>
       <div className="mt-4 grid gap-6 md:grid-cols-[1.4fr_1fr]">
         <div className="text-[var(--muted)] leading-relaxed space-y-4">
           <p>
@@ -528,9 +533,10 @@ function AboutHoneyb() {
             >
               Honeyb
             </a>{" "}
-            helps brands understand how AI assistants describe them. The free
-            tool above gives you a one-prompt snapshot against Gemini. The full
-            platform at{" "}
+            is the AI search optimisation platform that helps brands understand
+            and improve how AI assistants describe them. The free tool above
+            gives you a one-prompt snapshot against Gemini. The full platform
+            at{" "}
             <a
               href="https://honeyb.ai"
               className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
@@ -538,12 +544,13 @@ function AboutHoneyb() {
               honeyb.ai
             </a>{" "}
             tracks your brand across multiple AI models on a schedule and turns
-            the results into a recurring report.
+            the results into a recurring AI search optimisation report.
           </p>
           <p>
             If you&apos;ve ever wondered whether AI tells the same story about
             your brand twice in a row, the answer is usually no. Knowing the
-            shape of that variance is the start of doing something about it.
+            shape of that variance is the first step of any serious AI search
+            optimisation strategy.
           </p>
         </div>
         <div className="rounded-2xl border border-[var(--border)] p-6 text-sm">
@@ -596,15 +603,14 @@ function Footer() {
         device to Google.
       </p>
       <p>
-        AI Prompt Test is a free tool by{" "}
+        AI Prompt Test is a free AI search optimisation tool by{" "}
         <a
           href="https://honeyb.ai"
           className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
         >
           Honeyb
         </a>
-        . For continuous tracking of how AI answers questions about your brand,
-        visit{" "}
+        . For continuous AI search optimisation across multiple models, visit{" "}
         <a
           href="https://honeyb.ai"
           className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
