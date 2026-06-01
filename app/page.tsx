@@ -100,16 +100,26 @@ export default function Home() {
 function Header() {
   return (
     <div className="flex flex-col gap-4">
-      <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs text-[var(--muted)]">
+      <a
+        href="https://honeyb.ai"
+        className="inline-flex w-fit items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1 text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+      >
         <Sparks width={14} height={14} />
         <span>A free tool by Honeyb</span>
-      </div>
+      </a>
       <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight max-w-3xl">
         Test how consistently AI answers your prompt.
       </h1>
       <p className="text-lg text-[var(--muted)] max-w-2xl">
         Run the same prompt against Gemini multiple times. See which brands it
-        mentions, how stable the answer is, and where the gaps are.
+        mentions, how stable the answer is, and where the gaps are. Built by{" "}
+        <a
+          href="https://honeyb.ai"
+          className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+        >
+          Honeyb
+        </a>
+        .
       </p>
     </div>
   );
@@ -408,9 +418,29 @@ function Tile(props: { label: string; value: string; suffix: string }) {
 
 function Footer() {
   return (
-    <div className="mt-16 text-xs text-[var(--muted)]">
-      Your API key stays in this browser. Requests go directly from your device
-      to Google.
-    </div>
+    <footer className="mt-16 flex flex-col gap-3 text-xs text-[var(--muted)]">
+      <p>
+        Your API key stays in this browser. Requests go directly from your
+        device to Google.
+      </p>
+      <p>
+        AI Prompt Test is a free tool by{" "}
+        <a
+          href="https://honeyb.ai"
+          className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+        >
+          Honeyb
+        </a>
+        . For continuous tracking of how AI answers questions about your brand,
+        visit{" "}
+        <a
+          href="https://honeyb.ai"
+          className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+        >
+          honeyb.ai
+        </a>
+        .
+      </p>
+    </footer>
   );
 }
