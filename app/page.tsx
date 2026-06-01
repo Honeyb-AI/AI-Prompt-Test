@@ -91,6 +91,8 @@ export default function Home() {
           <ResultsCard run={run} brand={brand} />
         </div>
 
+        <UseCases />
+        <AboutHoneyb />
         <Footer />
       </div>
     </main>
@@ -413,6 +415,176 @@ function Tile(props: { label: string; value: string; suffix: string }) {
         </span>
       </div>
     </div>
+  );
+}
+
+function UseCases() {
+  const items = [
+    {
+      title: "Validate your messaging",
+      body: (
+        <>
+          Does AI describe you the way your website does? Compare what runs say
+          with what you publish at{" "}
+          <InlineLink>your own site</InlineLink> and find the gaps.{" "}
+          <a
+            href="https://honeyb.ai"
+            className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+          >
+            Honeyb
+          </a>{" "}
+          tracks this continuously across models.
+        </>
+      ),
+    },
+    {
+      title: "Competitive intelligence",
+      body: (
+        <>
+          See which brands AI mentions consistently vs. occasionally. Knowing
+          where you stand is the first step.{" "}
+          <a
+            href="https://honeyb.ai"
+            className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+          >
+            honeyb.ai
+          </a>{" "}
+          turns this into a recurring report you can act on.
+        </>
+      ),
+    },
+    {
+      title: "Find content gaps",
+      body: (
+        <>
+          Variable mentions mean AI doesn&apos;t have enough to go on. Publish
+          the missing context, run the test again, see if it moves. The full{" "}
+          <a
+            href="https://honeyb.ai"
+            className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+          >
+            Honeyb
+          </a>{" "}
+          platform automates the loop.
+        </>
+      ),
+    },
+  ];
+
+  return (
+    <section className="mt-16">
+      <h2 className="text-2xl font-semibold tracking-tight">
+        What you can do with this
+      </h2>
+      <p className="mt-2 text-[var(--muted)] max-w-2xl">
+        A single run shows you a snapshot. Repeated runs show you the pattern.
+        Here&apos;s where teams using{" "}
+        <a
+          href="https://honeyb.ai"
+          className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+        >
+          Honeyb
+        </a>{" "}
+        put that pattern to work.
+      </p>
+      <div className="mt-6 grid gap-4 md:grid-cols-3">
+        {items.map((item) => (
+          <article
+            key={item.title}
+            className="rounded-[28px] border border-[var(--border)] bg-[var(--surface)] p-6"
+          >
+            <h3 className="text-base font-semibold">{item.title}</h3>
+            <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+              {item.body}
+            </p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function InlineLink({ children }: { children: React.ReactNode }) {
+  return (
+    <a
+      href="https://honeyb.ai"
+      className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+    >
+      {children}
+    </a>
+  );
+}
+
+function AboutHoneyb() {
+  return (
+    <section className="mt-16 rounded-[28px] bg-[var(--surface)] p-8 md:p-10">
+      <h2 className="text-2xl font-semibold tracking-tight">About Honeyb</h2>
+      <div className="mt-4 grid gap-6 md:grid-cols-[1.4fr_1fr]">
+        <div className="text-[var(--muted)] leading-relaxed space-y-4">
+          <p>
+            <a
+              href="https://honeyb.ai"
+              className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+            >
+              Honeyb
+            </a>{" "}
+            helps brands understand how AI assistants describe them. The free
+            tool above gives you a one-prompt snapshot against Gemini. The full
+            platform at{" "}
+            <a
+              href="https://honeyb.ai"
+              className="text-[var(--foreground)] underline underline-offset-2 hover:no-underline"
+            >
+              honeyb.ai
+            </a>{" "}
+            tracks your brand across multiple AI models on a schedule and turns
+            the results into a recurring report.
+          </p>
+          <p>
+            If you&apos;ve ever wondered whether AI tells the same story about
+            your brand twice in a row, the answer is usually no. Knowing the
+            shape of that variance is the start of doing something about it.
+          </p>
+        </div>
+        <div className="rounded-2xl border border-[var(--border)] p-6 text-sm">
+          <div className="text-xs uppercase tracking-wide text-[var(--muted)]">
+            Learn more
+          </div>
+          <ul className="mt-3 space-y-2">
+            <li>
+              <a
+                href="https://honeyb.ai"
+                className="hover:underline underline-offset-2"
+              >
+                honeyb.ai
+              </a>
+              <span className="text-[var(--muted)]"> — product overview</span>
+            </li>
+            <li>
+              <a
+                href="https://honeyb.ai"
+                className="hover:underline underline-offset-2"
+              >
+                Get in touch
+              </a>
+              <span className="text-[var(--muted)]"> — talk to the team</span>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Honeyb-AI"
+                className="hover:underline underline-offset-2"
+              >
+                Honeyb on GitHub
+              </a>
+              <span className="text-[var(--muted)]">
+                {" "}
+                — more free tools
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 }
 
